@@ -12,7 +12,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET
+          envVariableKeys: DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET,NEXTAUTH_URL,DATABASE_URL
         env:
           DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}
           TYPE_DISCORD_CLIENT_ID: encrypted
@@ -21,7 +21,11 @@ jobs:
           TARGET_DISCORD_CLIENT_SECRET: preview,development,production
           TYPE_DISCORD_CLIENT_SECRET: encrypted
           NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+          TARGET_NEXTAUTH_URL: preview,development,production
+          TYPE_NEXTAUTH_URL: encrypted
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          TARGET_DATABASE_URL: preview,development,production
+          TYPE_DATABASE_URL: encrypted
       - uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
