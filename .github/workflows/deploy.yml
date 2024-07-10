@@ -11,7 +11,7 @@ jobs:
       - uses: dkershner6/vercel-set-env-action@v1
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
-          projectName: events-app
+          projectName: athromic-t3
           envVariableKeys: DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET,NEXTAUTH_URL,DATABASE_URL
         env:
           DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}
