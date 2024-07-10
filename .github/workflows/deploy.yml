@@ -12,8 +12,9 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys:  DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET,NEXTAUTH_URL,DATABASE_URL
+          envVariableKeys: TARGET_DISCORD_CLIENT_ID,DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET,NEXTAUTH_URL,DATABASE_URL
         env:
+          TARGET_DISCORD_CLIENT_ID: ${{ secrets.TARGET_DISCORD_CLIENT_ID }}
           DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}
           DISCORD_CLIENT_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
           NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
