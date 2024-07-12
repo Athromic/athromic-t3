@@ -1,8 +1,10 @@
 name: Deploy to Vercel on Merge
+
 on:
   push:
     branches:
       - master
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -19,31 +21,36 @@ jobs:
           TYPE_DISCORD_CLIENT_ID: encrypted
           TARGET_DISCORD_CLIENT_ID: preview,development,production
           DISCORD_CLIENT_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
-          TARGET_DISCORD_CLIENT_SECRET: preview,development,production
           TYPE_DISCORD_CLIENT_SECRET: encrypted
-
+          TARGET_DISCORD_CLIENT_SECRET: preview,development,production
           S_GITHUB_ID: ${{ secrets.S_GITHUB_ID }}
           TYPE_S_GITHUB_ID: encrypted
           TARGET_S_GITHUB_ID: preview,development,production
-
           S_GITHUB_SECRET: ${{ secrets.S_GITHUB_SECRET }}
           TYPE_S_GITHUB_SECRET: encrypted
           TARGET_S_GITHUB_SECRET: preview,development,production
-
           NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
-          TARGET_NEXTAUTH_URL: preview,development,production
           TYPE_NEXTAUTH_URL: encrypted
+          TARGET_NEXTAUTH_URL: preview,development,production
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          TARGET_DATABASE_URL: preview,development,production
           TYPE_DATABASE_URL: encrypted
+          TARGET_DATABASE_URL: preview,development,production
           NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-          TARGET_NEXTAUTH_SECRET: preview,development,production
           TYPE_NEXTAUTH_SECRET: encrypted
-      
+          TARGET_NEXTAUTH_SECRET: preview,development,production
+
       - uses: amondnet/vercel-action@v20
+        id: vercel-deploy
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-args: '--prod'
           vercel-org-id: ${{ secrets.ORG_ID}}
           vercel-project-id: ${{ secrets.PROJECT_ID}}
+        env:
+          VERBOSE: true
+      
+      - name: Debug Vercel Deployment Outputs
+        run: |
+          echo "Vercel Preview URL: ${{ steps.vercel-deploy.outputs.preview-url }}"
+          echo "Vercel Deployment Output: ${{ toJson(steps.vercel-deploy.outputs) }}"
