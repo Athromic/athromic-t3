@@ -1,8 +1,10 @@
 name: Create Vercel Preview URL on Pull Request
+
 on:
   pull_request:
     branches:
       - main
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -19,10 +21,17 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-org-id: ${{ secrets.ORG_ID}}
           vercel-project-id: ${{ secrets.PROJECT_ID}}
+        env:
+          VERBOSE: true
+      
+      - name: Debug Vercel Deployment Outputs
+        run: |
+          echo "Vercel Preview URL: ${{ steps.vercel-deploy.outputs.preview-url }}"
+          echo "Vercel Deployment Output: ${{ toJson(steps.vercel-deploy.outputs) }}"
       
       - name: Set preview-url output
         run: |
-          echo "preview-url=${{ steps.vercel-deploy.outputs.preview-url }}" >> $GITHUB_ENV
+          echo "PREVIEW_URL=${{ steps.vercel-deploy.outputs.preview-url }}" >> $GITHUB_ENV
       
       - name: Add comment to pull request
         uses: actions/github-script@v4
@@ -32,5 +41,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Deployed to [Preview URL](${ process.env.preview-url })`
+              body: `Deployed to [Preview URL](${ process.env.PREVIEW_URL })`
             })
