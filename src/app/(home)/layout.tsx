@@ -1,5 +1,7 @@
 import HomeFooter from "../../components/footer/home";
 import HomeNavbar from "../../components/navbar/home";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -13,6 +15,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
 
       <HomeFooter />
+      <SpeedInsights />
+      <Analytics />
     </div>
     </body>
     </html>
