@@ -71,5 +71,12 @@ const FooterLink = ({
     >
       {children}
     </Link>
+<iframe
+  src="https://status.athromic.com/badge?theme=dark"
+  width={250}
+  height={30}
+  frameBorder={0}
+  scrolling="no"
+/>
   );
 };
