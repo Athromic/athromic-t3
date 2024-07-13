@@ -58,7 +58,7 @@ export default function Page() {
 
       <p>
         If you have any questions about this Privacy Policy, You can contact us:{" "}
-        <Link href="mailto:mason@athromic.com">vanxh@openbio.app</Link>
+        <Link href="mailto:mason@athromic.com">mason@athromic.com</Link>
       </p>
     </div>
   );
