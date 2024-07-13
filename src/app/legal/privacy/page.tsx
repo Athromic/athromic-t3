@@ -5,7 +5,7 @@ export default function Page() {
     <div>
       <h1>Privacy Policy</h1>
 
-      <p>Last updated: August 27, 2023</p>
+      <p>Last updated: July 13, 2024</p>
 
       <p>
         This Privacy Policy describes Our policies and procedures on the
@@ -58,7 +58,7 @@ export default function Page() {
 
       <p>
         If you have any questions about this Privacy Policy, You can contact us:{" "}
-        <Link href="mailto:vanxh@openbio.app">vanxh@openbio.app</Link>
+        <Link href="mailto:mason@athromic.com">vanxh@openbio.app</Link>
       </p>
     </div>
   );
