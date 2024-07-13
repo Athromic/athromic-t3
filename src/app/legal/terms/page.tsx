@@ -5,7 +5,7 @@ export default function Page() {
     <div>
       <h1>Terms of Service</h1>
 
-      <p>Last updated: August 27, 2023</p>
+      <p>Last updated: July 13, 2024</p>
 
       <p>
         Please read these terms and conditions carefully before using Our
@@ -39,7 +39,7 @@ export default function Page() {
       <h2>Limitation Of Liability</h2>
 
       <p>
-        In no event shall OpenBio, nor its directors, employees, partners,
+        In no event shall Athromic, nor its directors, employees, partners,
         agents, suppliers, or affiliates, be liable for any indirect,
         incidental, special, consequential or punitive damages, including
         without limitation, loss of profits, data, use, goodwill, or other
@@ -65,7 +65,7 @@ export default function Page() {
       </p>
 
       <p>
-        OpenBio its subsidiaries, affiliates, and its licensors do not warrant
+        Atheomic its subsidiaries, affiliates, and its licensors do not warrant
         that a) the Service will function uninterrupted, secure or available at
         any particular time or location; b) any errors or defects will be
         corrected; c) the Service is free of viruses or other harmful
@@ -77,7 +77,7 @@ export default function Page() {
 
       <p>
         These Terms shall be governed and construed in accordance with the laws
-        of India, without regard to its conflict of law provisions.
+        of United States, without regard to its conflict of law provisions.
       </p>
 
       <p>
@@ -108,7 +108,7 @@ export default function Page() {
 
       <p>
         If you have any questions about these Terms, You can contact us:{" "}
-        <Link href="mailto:vanxh@openbio.app">vanxh@openbio.app</Link>
+        <Link href="mailto:mason@athromic.com">mason@athromic.com</Link>
       </p>
     </div>
   );
