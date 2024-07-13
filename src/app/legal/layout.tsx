@@ -6,6 +6,8 @@ import {
 } from "../../app/shared-metadata";
 import HomeFooter from "../../components/footer/home";
 import HomeNavbar from "../../components/navbar/home";
+import { Inter } from "next/font/google";
+import LocalFont from "next/font/local";
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -20,8 +22,24 @@ export const metadata: Metadata = {
   },
 };
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+});
+
+const calSans = LocalFont({
+  src: "../../../public/fonts/CalSans-SemiBold.ttf",
+  variable: "--font-calsans",
+});
+
+import Background from "../../components/background/";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${calSans.variable} font-inter`}>
+      <Background />
     <section className="container mx-auto flex h-full w-full flex-col items-center justify-center gap-y-6 pb-4 pt-24 md:pb-8">
       <HomeNavbar />
 
@@ -33,5 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <HomeFooter />
     </section>
+    </body>
+    </html>
   );
 }
