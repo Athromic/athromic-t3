@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import {
   defaultMetadata,
   ogMetadata,
@@ -54,6 +55,7 @@ export default function RootLayout({
           <Toaster />
           <TailwindIndicator />
           <Analytics />
+          <SpeedInsights />
         </body>
       </html>
   );
