@@ -21,34 +21,31 @@ export const PLANS: {
       },
     },
     features: [
-      {
-        text: "1 link",
+     {
+        text: "Feature #1",
       },
       {
-        text: "Analytics",
-        tooltip: "See how many people view your links",
+        text: "Feature #2",
+        tooltip: "tooltip",
       },
       {
-        text: "Custom domain",
-        tooltip: "Add your own domain to your links",
-        notAvailable: true,
+        text: "Feature #3",
+        tooltip: "tooltip",
       },
       {
-        text: "Remove branding",
-        tooltip: "Remove branding from your links",
-        notAvailable: true,
+        text: "Feature #4",
+        tooltip: "tooltip",
       },
       {
-        text: "Video cards",
-        tooltip: "Add video cards to your links",
-        notAvailable: true,
+        text: "Feature #5",
+        tooltip: "tooltip",
       },
     ],
     footer: "All features might not be available yet",
   },
   {
-    name: "Free",
-    description: "Free forever",
+    name: "Pay as you go",
+    description: "Pay only for what you use.",
     price: {
       monthly: {
         amount: 0,
@@ -59,28 +56,25 @@ export const PLANS: {
     },
     features: [
       {
-        text: "1 link",
+        text: "Feature #1",
       },
       {
-        text: "Analytics",
-        tooltip: "See how many people view your links",
+        text: "Feature #2",
+        tooltip: "tooltip",
       },
       {
-        text: "Custom domain",
-        tooltip: "Add your own domain to your links",
-        notAvailable: true,
+        text: "Feature #3",
+        tooltip: "tooltip",
       },
       {
-        text: "Remove branding",
-        tooltip: "Remove branding from your links",
-        notAvailable: true,
+        text: "Feature #4",
+        tooltip: "tooltip",
       },
       {
-        text: "Video cards",
-        tooltip: "Add video cards to your links",
-        notAvailable: true,
+        text: "Feature #5",
+        tooltip: "tooltip",
       },
     ],
-    footer: "All features might not be available yet",
+    footer: "*This plan is not yet available.",
   },
 ];
