@@ -30,7 +30,7 @@ export default async function Page() {
             </Button>
           </Link>
 
-          <Link href="#" target="_blank" rel="noopener noreferrer" passHref>
+          <Link href="https://github.com/Athromic/athromic-t3" target="_blank" rel="noopener noreferrer" passHref>
             <Button className="whitespace-nowrap">
               <Github size={24} className="mr-2" />
               Star on Github
