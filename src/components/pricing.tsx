@@ -82,10 +82,7 @@ export default function Pricing() {
             </div>
   
             <div className="my-auto" />
-              <Button
-                className="mt-4"
-              >
-              </Button>
+              <Button className="mt-4">Get Started</Button>
   
             {plan.footer && (
               <p className="mt-4 text-xs text-muted-foreground">{plan.footer}</p>
