@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Github } from "lucide-react";
 import OpenBio from "../../../public/openbio.png";
-//import Pricing from "../../components/pricing";
+import Pricing from "../../components/pricing";
+import Enterprise from "~/components/enterprise";
 import { Button } from "../../components/ui/button";
 
 export default async function Page() {
@@ -52,6 +53,9 @@ export default async function Page() {
             <ChevronRight size={12} className="ml-2" />
           </Link>
         </Button>
+        <div className="my-12" />
+        <Pricing />
+        <Enterprise />
       </div>
   );
 }

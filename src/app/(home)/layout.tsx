@@ -23,8 +23,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${calSans.variable} font-inter`}>
+      <Background />
     <div className="container mx-auto flex min-h-screen w-full flex-col items-center justify-center py-4 md:py-8">
-    <Background />
       <HomeNavbar />
 
       <div className="flex w-full max-w-3xl flex-1 flex-col items-center justify-center py-20">
