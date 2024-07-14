@@ -25,7 +25,7 @@ export default function Pricing() {
         <p className="mt-4 text-lg md:text-xl">
           Start with a free plan and upgrade as you grow.
         </p>
-<div className="my-12" />
+<div className="my-6" />
         <div
         id="pricing"
         className="flex w-full flex-col gap-6 md:grid md:grid-cols-2"
