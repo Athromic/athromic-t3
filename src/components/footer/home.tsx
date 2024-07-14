@@ -10,7 +10,7 @@ export default function HomeFooter() {
     ],
     Links: [
       {
-        href: "#",
+        href: "https://github.com/Athromic/athromic-t3",
         label: "Github",
       },
     ],
