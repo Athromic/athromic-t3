@@ -30,8 +30,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.1(next@14.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.77.8))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       prism-react-renderer:
-        specifier: ^1.3.5
-        version: 1.3.5(react@18.2.0)
+        specifier: ^2.3.1
+        version: 2.3.1(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -583,6 +583,9 @@ packages:
   '@types/node@18.0.4':
     resolution: {integrity: sha512-M0+G6V0Y4YV8cqzHssZpaNCqvYwlCiulmm0PwpNLF55r/+cT8Ol42CHRU1SEaYFH2rTwiiE1aYg/2g2rrtGdPA==}
 
+  '@types/prismjs@1.26.4':
+    resolution: {integrity: sha512-rlAnzkW2sZOjbqZ743IHUhFcvzaGbqijwOu8QZnZCjfQzBqFE3s4lOTJEsxikImav9uzz/42I+O7YUs1mWgMlg==}
+
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
 
@@ -808,6 +811,10 @@ packages:
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
 
   cmdk@1.0.0:
     resolution: {integrity: sha512-gDzVf0a09TvoJ5jnuPvygTB77+XdOSwEmJ88L6XPFPlv7T3RxbP9jgenfylrAMD0+Le1aO0nVjQUzl2g+vjz5Q==}
@@ -1814,10 +1821,10 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  prism-react-renderer@1.3.5:
-    resolution: {integrity: sha512-IJ+MSwBWKG+SM3b2SUfdrhC+gu01QkV2KmRQgREThBfSQRoufqRfxfHUxpG1WcaFjP+kojcFyO9Qqtpgt3qLCg==}
+  prism-react-renderer@2.3.1:
+    resolution: {integrity: sha512-Rdf+HzBLR7KYjzpJ1rSoxT9ioO85nZngQEoFIhL07XhtJHlCU3SOz0GJ6+qvMyQe0Se+BV3qpe6Yd/NmQF5Juw==}
     peerDependencies:
-      react: '>=0.14.9'
+      react: '>=16.0.0'
 
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -2794,6 +2801,8 @@ snapshots:
 
   '@types/node@18.0.4': {}
 
+  '@types/prismjs@1.26.4': {}
+
   '@types/prop-types@15.7.12': {}
 
   '@types/react-dom@18.0.6':
@@ -3066,6 +3075,8 @@ snapshots:
       string-width: 5.1.2
 
   client-only@0.0.1: {}
+
+  clsx@2.1.1: {}
 
   cmdk@1.0.0(@types/react-dom@18.0.6)(@types/react@18.0.15)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
@@ -4222,8 +4233,10 @@ snapshots:
 
   prettier@3.3.3: {}
 
-  prism-react-renderer@1.3.5(react@18.2.0):
+  prism-react-renderer@2.3.1(react@18.2.0):
     dependencies:
+      '@types/prismjs': 1.26.4
+      clsx: 2.1.1
       react: 18.2.0
 
   prop-types@15.8.1:
