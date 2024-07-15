@@ -1,13 +1,9 @@
-import styles from 'styles/index.module.scss'
+import styles from '../styles/index.module.scss'
 import React from 'react'
 import { AnimatePresence, AnimateSharedLayout, motion, MotionProps, useInView } from 'framer-motion'
 import {
-  FramerCMDK,
-  LinearCMDK,
   LinearIcon,
-  VercelCMDK,
   VercelIcon,
-  RaycastCMDK,
   RaycastIcon,
   CopyIcon,
   FramerIcon,
@@ -44,33 +40,6 @@ export default function Index() {
             <GitHubButton />
           </div>
         </div>
-
-        <AnimatePresence exitBeforeEnter initial={false}>
-          {theme === 'framer' && (
-            <CMDKWrapper key="framer">
-              <FramerCMDK />
-            </CMDKWrapper>
-          )}
-          {theme === 'vercel' && (
-            <CMDKWrapper key="vercel">
-              <VercelCMDK />
-            </CMDKWrapper>
-          )}
-          {theme === 'linear' && (
-            <CMDKWrapper key="linear">
-              <LinearCMDK />
-            </CMDKWrapper>
-          )}
-          {theme === 'raycast' && (
-            <CMDKWrapper key="raycast">
-              <RaycastCMDK />
-            </CMDKWrapper>
-          )}
-        </AnimatePresence>
-
-        <ThemeContext.Provider value={{ theme, setTheme }}>
-          <ThemeSwitcher />
-        </ThemeContext.Provider>
 
         <div aria-hidden className={styles.line} />
 
