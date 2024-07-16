@@ -5,12 +5,13 @@ import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "Athromic",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-  metadataBase: new URL("https://precedent.dev"),
+    "Coming Soon.",
+  metadataBase: new URL("https://www.athromic.com"),
 };
 
 import { TRPCReactProvider } from "@/trpc/react";
@@ -23,15 +24,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>
-        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
-        <Suspense fallback="...">
-          <Nav />
-        </Suspense>
+        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-100 via-cyan-50 to-pink-100" />
+        <Nav />
         <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
         <TRPCReactProvider> {children}</TRPCReactProvider>
         </main>
         <Footer />
         <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   );
