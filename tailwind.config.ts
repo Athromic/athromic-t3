@@ -1,7 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+
 import { fontFamily } from "tailwindcss/defaultTheme";
 import { withUt } from "uploadthing/tw";
-/** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -110,6 +109,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/forms"),],
-} satisfies Config;
+}
 
 export default config;
