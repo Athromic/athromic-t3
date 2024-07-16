@@ -1,49 +1,55 @@
 {
-  "name": "cmdk-website",
+  "name": "athromic-t3",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
+    "build": "next build",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
     "dev": "next dev",
-    "build": "pnpm -F 'cmdk-website^...' build && next build",
-    "start": "next start",
-    "lint": "eslint --ext .tsx"
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
-    "@radix-ui/react-popover": "^0.1.6",
-    "cmdk": "^1.0.0",
-    "copy-to-clipboard": "^3.3.1",
-    "framer-motion": "^6.5.1",
-    "next": "14.1.1",
-    "next-seo": "^5.5.0",
-    "next-themes": "^0.2.0",
-    "prism-react-renderer": "^1.3.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sass": "^1.53.0"
+    "@auth/drizzle-adapter": "^1.1.0",
+    "@t3-oss/env-nextjs": "^0.10.1",
+    "@tanstack/react-query": "^5.50.0",
+    "@trpc/client": "^11.0.0-rc.446",
+    "@trpc/react-query": "^11.0.0-rc.446",
+    "@trpc/server": "^11.0.0-rc.446",
+    "drizzle-orm": "^0.30.10",
+    "geist": "^1.3.0",
+    "next": "^14.2.4",
+    "next-auth": "^4.24.7",
+    "postgres": "^3.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "server-only": "^0.0.1",
+    "superjson": "^2.2.1",
+    "zod": "^3.23.3"
   },
   "devDependencies": {
-    "@types/node": "18.0.4",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.19.0",
-    "eslint-config-next": "12.2.2",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.30.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "tailwindcss": "^3.4.4",
-    "typescript": "4.7.4"
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "drizzle-kit": "^0.21.4",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4",
+    "eslint-plugin-drizzle": "^0.2.3",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.5.3"
   },
-  "lint-staged": {
-    "*.{tsx},*.{ts},*.{mdx}": [
-      "eslint --fix"
-    ]
+  "ct3aMetadata": {
+    "initVersion": "7.36.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
+  "packageManager": "npm@10.5.2"
 }
