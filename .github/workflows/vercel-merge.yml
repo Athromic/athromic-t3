@@ -55,7 +55,7 @@ jobs:
           TYPE_EMAIL_SERVER_PORT: encrypted
           TARGET_EMAIL_SERVER_PORT: preview,development,production
           # Email From
-          EMAIL_SEMAIL_FROMERVER_PORT: ${{ secrets.EMAIL_FROM }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           TYPE_EMAIL_FROM: encrypted
           TARGET_EMAIL_FROM: preview,development,production
 
