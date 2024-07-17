@@ -17,18 +17,12 @@ jobs:
           projectName: athromic-t3
           envVariableKeys: DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,S_GITHUB_ID,S_GITHUB_SECRET
         env:
-          DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}
-          TYPE_DISCORD_CLIENT_ID: encrypted
-          TARGET_DISCORD_CLIENT_ID: preview,development,production
-          DISCORD_CLIENT_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
-          TYPE_DISCORD_CLIENT_SECRET: encrypted
-          TARGET_DISCORD_CLIENT_SECRET: preview,development,production
-          S_GITHUB_ID: ${{ secrets.S_GITHUB_ID }}
-          TYPE_S_GITHUB_ID: encrypted
-          TARGET_S_GITHUB_ID: preview,development,production
-          S_GITHUB_SECRET: ${{ secrets.S_GITHUB_SECRET }}
-          TYPE_S_GITHUB_SECRET: encrypted
-          TARGET_S_GITHUB_SECRET: preview,development,production
+          _GITHUB_ID: ${{ secrets._GITHUB_ID }}
+          TYPE__GITHUB_ID: encrypted
+          TARGET__GITHUB_ID: preview,development,production
+          _GITHUB_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
+          TYPE__GITHUB_SECRET: encrypted
+          TARGET__GITHUB_SECRET: preview,development,production
           NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
           TYPE_NEXTAUTH_URL: encrypted
           TARGET_NEXTAUTH_URL: preview,development,production
@@ -38,16 +32,22 @@ jobs:
           NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
           TYPE_NEXTAUTH_SECRET: encrypted
           TARGET_NEXTAUTH_SECRET: preview,development,production
+          TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}
+          TYPE_TURSO_CONNECTION_URL: encrypted
+          TARGET_TURSO_CONNECTION_URL: preview,development,production
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          TYPE_TURSO_AUTH_TOKEN: encrypted
+          TARGET_TURSO_AUTH_TOKEN: preview,development,production
 
       - name: Debug Environment Variables
         run: |
-          echo "DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}"
-          echo "DISCORD_CLIENT_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}"
-          echo "S_GITHUB_ID: ${{ secrets.S_GITHUB_ID }}"
-          echo "S_GITHUB_SECRET: ${{ secrets.S_GITHUB_SECRET }}"
+          echo "_GITHUB_ID: ${{ secrets._GITHUB_ID }}"
+          echo "_GITHUB_SECRET: ${{ secrets._GITHUB_SECRET }}"
           echo "NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}"
           echo "DATABASE_URL: ${{ secrets.DATABASE_URL }}"
           echo "NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}"
+          echo "TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}"
+          echo "TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}"
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy

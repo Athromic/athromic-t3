@@ -24,6 +24,9 @@ export const env = createEnv({
     ),
     _GITHUB_ID: z.string(),
     _GITHUB_SECRET: z.string(),
+
+    TURSO_CONNECTION_URL: z.string(),
+    TURSO_AUTH_TOKEN: z.string(),
   },
 
   /**
@@ -46,6 +49,8 @@ export const env = createEnv({
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     _GITHUB_ID: process.env._GITHUB_ID,
     _GITHUB_SECRET: process.env._GITHUB_SECRET,
+    TURSO_CONNECTION_URL: process.env.TURSO_CONNECTION_URL,
+    TURSO_AUTH_TOKEN: process.env.TURSO_AUTH_TOKEN,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
