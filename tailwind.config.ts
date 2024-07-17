@@ -1,6 +1,14 @@
 
 import { fontFamily } from "tailwindcss/defaultTheme";
 import { withUt } from "uploadthing/tw";
+
+const svgToDataUri = require("mini-svg-data-uri");
+ 
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 const config = {
   darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
