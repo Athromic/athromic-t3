@@ -15,20 +15,14 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,S_GITHUB_ID,S_GITHUB_SECRET
+          envVariableKeys: DISCORD_CLIENT_ID,DISCORD_CLIENT_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET
         env:
-          DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}
-          TYPE_DISCORD_CLIENT_ID: encrypted
-          TARGET_DISCORD_CLIENT_ID: preview,development,production
-          DISCORD_CLIENT_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
-          TYPE_DISCORD_CLIENT_SECRET: encrypted
-          TARGET_DISCORD_CLIENT_SECRET: preview,development,production
-          S_GITHUB_ID: ${{ secrets.S_GITHUB_ID }}
-          TYPE_S_GITHUB_ID: encrypted
-          TARGET_S_GITHUB_ID: preview,development,production
-          S_GITHUB_SECRET: ${{ secrets.S_GITHUB_SECRET }}
-          TYPE_S_GITHUB_SECRET: encrypted
-          TARGET_S_GITHUB_SECRET: preview,development,production
+          _GITHUB_ID: ${{ secrets._GITHUB_ID }}
+          TYPE__GITHUB_ID: encrypted
+          TARGET__GITHUB_ID: preview,development,production
+          _GITHUB_SECRET: ${{ secrets._GITHUB_SECRET }}
+          TYPE__GITHUB_SECRET: encrypted
+          TARGET__GITHUB_SECRET: preview,development,production
           NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
           TYPE_NEXTAUTH_URL: encrypted
           TARGET_NEXTAUTH_URL: preview,development,production
