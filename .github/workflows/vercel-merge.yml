@@ -20,7 +20,7 @@ jobs:
           _GITHUB_ID: ${{ secrets._GITHUB_ID }}
           TYPE__GITHUB_ID: encrypted
           TARGET__GITHUB_ID: preview,development,production
-          _GITHUB_SECRET: ${{ secrets.DISCORD_CLIENT_SECRET }}
+          _GITHUB_SECRET: ${{ secrets._GITHUB_SECRET }}
           TYPE__GITHUB_SECRET: encrypted
           TARGET__GITHUB_SECRET: preview,development,production
           NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
