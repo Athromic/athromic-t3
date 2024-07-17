@@ -43,11 +43,11 @@ jobs:
           TYPE_EMAIL_SERVER_USER: encrypted
           TARGET_EMAIL_SERVER_USER: preview,development,production
           # Password
-          EMAIL_SERVER_PASSWORD: ${{ secrets.EMAIL_SERVER_USER }}
+          EMAIL_SERVER_PASSWORD: ${{ secrets.EMAIL_SERVER_PASSWORD }}
           TYPE_EMAIL_SERVER_PASSWORD: encrypted
           TARGET_EMAIL_SERVER_PASSWORD: preview,development,production
           # Host
-          EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_PASSWORD }}
+          EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}
           TYPE_EMAIL_SERVER_HOST: encrypted
           TARGET_EMAIL_SERVER_HOST: preview,development,production
           # Port
@@ -68,6 +68,11 @@ jobs:
           echo "NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}"
           echo "TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}"
           echo "TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}"
+          echo "EMAIL_SERVER_USER: ${{ secrets.EMAIL_SERVER_USER }}"
+          echo "EMAIL_SERVER_PASSWORD: ${{ secrets.EMAIL_SERVER_PASSWORD }}"
+          echo "EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}"
+          echo "EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}"
+          echo "EMAIL_FROM: ${{ secrets.EMAIL_FROM }}"
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy
