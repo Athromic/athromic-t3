@@ -43,3 +43,4 @@ export default function useMediaQuery() {
     isTablet: device === "tablet",
     isDesktop: device === "desktop",
   };
+}
