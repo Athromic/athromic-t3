@@ -7,7 +7,7 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import { LoadingDots, Google } from "@/components/shared/icons";
+import { LoadingDots, Github } from "@/components/shared/icons";
 import Image from "next/image";
 
 const SignInModal = ({
@@ -34,8 +34,7 @@ const SignInModal = ({
           </a>
           <h3 className="font-display text-2xl font-bold">Sign In</h3>
           <p className="text-sm text-gray-500">
-            This is strictly for demo purposes - only your email and profile
-            picture will be stored.
+            At this stage, signing up is usless due to the lack of any kind dashboard. 
           </p>
         </div>
 
@@ -49,15 +48,15 @@ const SignInModal = ({
             } flex h-10 w-full items-center justify-center space-x-3 rounded-md border text-sm shadow-sm transition-all duration-75 focus:outline-none`}
             onClick={() => {
               setSignInClicked(true);
-              signIn("google");
+              signIn("github");
             }}
           >
             {signInClicked ? (
               <LoadingDots color="#808080" />
             ) : (
               <>
-                <Google className="h-5 w-5" />
-                <p>Sign In with Google</p>
+                <Github className="h-5 w-5" />
+                <p>Sign In with Github</p>
               </>
             )}
           </button>

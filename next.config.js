@@ -5,6 +5,12 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+
+  images: {
+    domains: ["avatars.githubusercontent.com", "vercel.com"],
+ },
+
+};
 
 export default config;
