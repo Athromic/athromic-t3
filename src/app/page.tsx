@@ -3,12 +3,20 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { FAQ } from "@/components/home/faq";
-import { HydrateClient } from "@/trpc/server";
 import  Card  from "@/components/home/card"
 
-export default async function Home() {
-
+export function GridBackgroundDemo() {
   return (
+    <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+    </div>
+  );
+}
+
+export default async function Home() {
+  return (
+    
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
