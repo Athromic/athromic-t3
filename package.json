@@ -14,7 +14,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@auth/drizzle-adapter": "^1.1.0",
+    "@auth/drizzle-adapter": "^1.4.1",
     "@libsql/client": "^0.7.0",
     "@next/font": "^14.2.5",
     "@radix-ui/react-accordion": "^1.2.0",
@@ -44,6 +44,7 @@
     "mini-svg-data-uri": "^1.4.4",
     "next": "^14.2.4",
     "next-auth": "^4.24.7",
+    "nodemailer": "^6.9.14",
     "postgres": "^3.4.4",
     "radix-ui": "^1.0.1",
     "react": "^18.3.1",

@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN
+          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM
         env:
           _GITHUB_ID: ${{ secrets._GITHUB_ID }}
           TYPE__GITHUB_ID: encrypted
@@ -38,6 +38,26 @@ jobs:
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           TYPE_TURSO_AUTH_TOKEN: encrypted
           TARGET_TURSO_AUTH_TOKEN: preview,development,production
+          # Email stuff
+          EMAIL_SERVER_USER: ${{ secrets.EMAIL_SERVER_USER }}
+          TYPE_EMAIL_SERVER_USER: encrypted
+          TARGET_EMAIL_SERVER_USER: preview,development,production
+          # Password
+          EMAIL_SERVER_PASSWORD: ${{ secrets.EMAIL_SERVER_USER }}
+          TYPE_EMAIL_SERVER_PASSWORD: encrypted
+          TARGET_EMAIL_SERVER_PASSWORD: preview,development,production
+          # Host
+          EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_PASSWORD }}
+          TYPE_EMAIL_SERVER_HOST: encrypted
+          TARGET_EMAIL_SERVER_HOST: preview,development,production
+          # Port
+          EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}
+          TYPE_EMAIL_SERVER_PORT: encrypted
+          TARGET_EMAIL_SERVER_PORT: preview,development,production
+          # Email From
+          EMAIL_SEMAIL_FROMERVER_PORT: ${{ secrets.EMAIL_FROM }}
+          TYPE_EMAIL_FROM: encrypted
+          TARGET_EMAIL_FROM: preview,development,production
 
       - name: Debug Environment Variables
         run: |
