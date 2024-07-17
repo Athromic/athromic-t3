@@ -8,7 +8,6 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 
 export default async function Home() {
   return (
-    
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
@@ -73,7 +72,7 @@ export default async function Home() {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full p-4 lg:p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full p-4 lg:p-6 my-6">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
         className=""
