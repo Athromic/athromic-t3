@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FAQ } from "@/components/home/faq";
 import  Card  from "@/components/home/card"
 import { WobbleCard } from "@/components/ui/wobble-card";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 export default async function Home() {
   return (
@@ -31,7 +32,14 @@ export default async function Home() {
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          a cool description.
+          a cool description,{" "}
+        <LinkPreview
+          url="https://example.com"
+          className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+        >
+          and a link,
+        </LinkPreview>{" "}
+        crazy.
         </p>
         <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"

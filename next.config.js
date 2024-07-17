@@ -8,7 +8,7 @@ await import("./src/env.js");
 const config = {
 
   images: {
-    domains: ["avatars.githubusercontent.com", "vercel.com", "images.unsplash.com", "assets.aceternity.com"],
+    domains: ["avatars.githubusercontent.com", "vercel.com", "images.unsplash.com", "assets.aceternity.com", "api.microlink.io"],
  },
 
 };
