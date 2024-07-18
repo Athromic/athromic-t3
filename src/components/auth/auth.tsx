@@ -65,7 +65,7 @@ export function Login() {
           ) : (
             <>
               <IconBrandGithub className="h-5 w-5" />
-              <p>Sign In with Github</p>
+              <p>Continue with Github</p>
             </>
           )}
            <BottomGradient />
