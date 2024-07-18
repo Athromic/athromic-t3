@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Page() {
+export default async function Page() {
   return (
-    <div>
+    <div className="z-10 w-full max-w-xl px-5 xl:px-0 bg-white">
       <h1>Terms of Service</h1>
 
       <p>Last updated: June 18, 2024</p>
