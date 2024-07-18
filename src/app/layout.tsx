@@ -24,12 +24,27 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-touch-icon?<generated>"
+          type="image"
+          sizes="<generated>"
+        />
+        <link
+          rel="icon"
+          href="/icon"
+          type="image"
+          sizes="<generated>"
+        />
+      </head>
       <body className={cx(sfPro.variable, inter.variable)}>
-      <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-100 via-cyan-50 to-pink-100">
-        <div className="relative fixed inset-0 -z-10">
-          <GridBackground />
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent to-pink-100 opacity-50" />
-        </div>
+        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-100 via-cyan-50 to-pink-100">
+          <div className="relative fixed inset-0 -z-10">
+            <GridBackground />
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-pink-100 opacity-50" />
+          </div>
         </div>
         <Nav />
         <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
