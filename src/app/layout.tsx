@@ -11,6 +11,9 @@ export const metadata = {
   description:
     "Coming Soon.",
   metadataBase: new URL("https://www.athromic.com"),
+  icons: {
+    icon: '/favicon.ico', // /public path
+  },
 };
 
 import { GridBackground } from "@/components/shared/background-grid";
@@ -24,21 +27,6 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-touch-icon?<generated>"
-          type="image"
-          sizes="<generated>"
-        />
-        <link
-          rel="icon"
-          href="/icon"
-          type="image"
-          sizes="<generated>"
-        />
-      </head>
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-100 via-cyan-50 to-pink-100">
           <div className="relative fixed inset-0 -z-10">
