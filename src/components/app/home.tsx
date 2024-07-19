@@ -2,7 +2,7 @@
 
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
 
-export function PlaceholdersAndVanishInputDemo() {
+export function SearchBar() {
   const placeholders = [
     "What's the first rule of Fight Club?",
     "Who is Tyler Durden?",
