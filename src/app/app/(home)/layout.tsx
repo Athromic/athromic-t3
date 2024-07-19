@@ -18,7 +18,7 @@ export const metadata = {
 
 import { TRPCReactProvider } from "@/trpc/react";
 
-export default async function RootLayout({
+export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
