@@ -1,9 +1,31 @@
-# Ignore .env.example file
-.env.example
-
-# Ignore node_modules directory
 node_modules
+.pnp
+.pnp.js
+coverage
 
-# Ignore build output directories
+.changeset
+.github/**/*.yaml
+.github/**/*.yml
+
+.next/
+**/next-env.d.ts
+out/
 build
 dist
+
+.DS_Store
+*.pem
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+CHANGELOG.md
+
+.svelte-kit
+.solid
+.nuxt
+.output
+
+package-lock.yaml
