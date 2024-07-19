@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.4.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@libsql/client": "^0.7.0",
     "@next/font": "^14.2.5",
     "@radix-ui/react-accordion": "^1.2.0",
