@@ -29,3 +29,5 @@ CHANGELOG.md
 .output
 
 package-lock.yaml
+
+.env.example
