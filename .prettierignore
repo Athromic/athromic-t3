@@ -1,0 +1,9 @@
+# Ignore .env.example file
+.env.example
+
+# Ignore node_modules directory
+node_modules
+
+# Ignore build output directories
+build
+dist
