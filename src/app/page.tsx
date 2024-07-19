@@ -6,11 +6,25 @@ import { FAQ } from "@/components/home/faq";
 import  Card  from "@/components/home/card"
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { LinkPreview } from "@/components/ui/link-preview";
+import { Spotlight } from "@/components/ui/spotlight";
+
+import { CommandDialogMenu } from "@/components/shared/commands";
+
+import React from "react";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export default async function Home() {
+
+  const words = ["better", "cute", "beautiful", "modern"];
+
   return (
     <>
+    <CommandDialogMenu />
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
         <a
           href="#"
           target="_blank"
@@ -26,7 +40,7 @@ export default async function Home() {
           className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          athromic will be cool
+          athromic will be <FlipWords words={words} /> <br />
         </h1>
         <p
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
@@ -133,3 +147,5 @@ export default async function Home() {
     </>
   );
 }
+
+

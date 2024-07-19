@@ -71,6 +71,7 @@ const config = {
       },
       animation: {
         // Fade up and down
+        "spotlight": "spotlight 2s ease .75s 1 forwards",
         "fade-up": "fade-up 0.5s",
         "fade-down": "fade-down 0.5s",
         // Tooltip
@@ -79,6 +80,16 @@ const config = {
       },
       keyframes: {
         // Fade up and down
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
         "fade-up": {
           "0%": {
             opacity: 0,
