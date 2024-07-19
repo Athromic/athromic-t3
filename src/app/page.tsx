@@ -8,6 +8,8 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { Spotlight } from "@/components/ui/spotlight";
 
+import { FeaturesSection } from "@/components/home/featured-card"
+
 import { CommandDialogMenu } from "@/components/shared/commands";
 
 import React from "react";
@@ -15,7 +17,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 
 export default async function Home() {
 
-  const words = ["better", "cute", "beautiful", "modern"];
+  const words = ["better","beautiful", "modern"];
 
   return (
     <>
@@ -143,6 +145,21 @@ export default async function Home() {
           className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
+    </div>
+    <div className="gap-4 max-w-7xl mx-auto w-full p-4 lg:p-6 my-6">
+    <div className="relative z-20 max-w-7xl mx-auto">
+      <div className="px-8">
+        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
+          <b>Packed with thousands of features</b>
+        </h4>
+ 
+        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+          From Image generation to video generation, Everything AI has APIs for
+          literally everything. It can even create this website copy for you.
+        </p>
+        </div>
+      </div>
+    <FeaturesSection />
     </div>
     </>
   );

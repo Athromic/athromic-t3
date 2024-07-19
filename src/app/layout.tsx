@@ -29,9 +29,9 @@ export default async function RootLayout({
     <html lang="en" className="light">
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-100 via-cyan-50 to-pink-100">
-          <div className="relative fixed inset-0 -z-10">
+          <div className="fixed inset-0 -z-10 w-full h-screen">
             <GridBackground />
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-pink-100 opacity-50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-pink-100 opacity-70" />
           </div>
         </div>
         <Nav />
