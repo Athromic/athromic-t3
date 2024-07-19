@@ -3,8 +3,6 @@ import cx from "classnames";
 import { sfPro, inter } from "../../fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
-import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: "Athromic - App",
@@ -24,8 +22,6 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-100 via-cyan-50 to-pink-100">
           <div className="relative fixed inset-0 -z-10">
             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-pink-100 opacity-50" />
@@ -38,9 +34,5 @@ export default async function Layout({
           </TRPCReactProvider>
         </main>
         <Footer />
-        <VercelAnalytics />
-        <SpeedInsights />
-      </body>
-    </html>
   );
 }
