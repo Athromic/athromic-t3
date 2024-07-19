@@ -8,9 +8,7 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { Spotlight } from "@/components/ui/spotlight";
 
-import { FeaturesSection } from "@/components/home/featured-card"
-
-import { CommandDialogMenu } from "@/components/shared/commands";
+import { BentoGridThirdDemo } from "@/components/home/bento"
 
 import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
@@ -21,7 +19,6 @@ export default async function Home() {
 
   return (
     <>
-    <CommandDialogMenu />
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
@@ -96,7 +93,7 @@ export default async function Home() {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full p-4 lg:p-6 my-6">
+      <div className="animate-fade-up grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full p-4 lg:p-6 my-6">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
         className=""
@@ -146,7 +143,7 @@ export default async function Home() {
         />
       </WobbleCard>
     </div>
-    <div className="gap-4 max-w-7xl mx-auto w-full p-4 lg:p-6 my-6">
+    <div className="animate-fade-up gap-4 max-w-7xl mx-auto w-full p-4 lg:p-6 my-6">
     <div className="relative z-20 max-w-7xl mx-auto">
       <div className="px-8">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
@@ -159,7 +156,7 @@ export default async function Home() {
         </p>
         </div>
       </div>
-    <FeaturesSection />
+      <BentoGridThirdDemo />
     </div>
     </>
   );
