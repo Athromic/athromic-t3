@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import cx from "classnames";
-import { sfPro, inter } from "../../../fonts";
+import { sfPro, inter } from "../../fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
