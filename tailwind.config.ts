@@ -77,6 +77,7 @@ const config = {
         // Tooltip
         "slide-up-fade": "slide-up-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
         "slide-down-fade": "slide-down-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+         "move": "move 5s linear infinite",
       },
       keyframes: {
         shimmer: {
@@ -86,6 +87,10 @@ const config = {
           to: {
             backgroundPosition: "-200% 0",
           },
+        },
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
         },
         // Fade up and down
         spotlight: {
