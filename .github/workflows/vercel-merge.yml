@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM,DATABASE_URI_Payload,PAYLOAD_SECRET
+          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM,DATABASE_URI_PAYLOAD,PAYLOAD_SECRET
         env:
           _GITHUB_ID: ${{ secrets._GITHUB_ID }}
           TYPE__GITHUB_ID: encrypted
@@ -59,7 +59,7 @@ jobs:
           TYPE_EMAIL_FROM: encrypted
           TARGET_EMAIL_FROM: preview,development,production
           # PayloadCMS
-          DATABASE_URI_Payload: ${{ secrets.DATABASE_URI_Payload }}
+          DATABASE_URI_PAYLOAD: ${{ secrets.DATABASE_URI_PAYLOAD }}
           TYPE_DATABASE_URI_Payload: encrypted
           TARGET_DATABASE_URI_Payload: preview,development,production
           # PayloadCMS
@@ -81,7 +81,7 @@ jobs:
           echo "EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}"
           echo "EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}"
           echo "EMAIL_FROM: ${{ secrets.EMAIL_FROM }}"
-          echo "DATABASE_URI_Payload: ${{ secrets.DATABASE_URI_Payload }}"
+          echo "DATABASE_URI_PAYLOAD: ${{ secrets.DATABASE_URI_PAYLOAD }}"
           echo "PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}"
 
       - uses: amondnet/vercel-action@v20
