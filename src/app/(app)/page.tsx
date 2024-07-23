@@ -12,7 +12,6 @@ import { BentoGridThirdDemo } from "@/components/home/bento"
 
 import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
-import { DamnGoodCard } from "@/components/home/damn-good-card";
 export default async function Home() {
 
   const words = ["better","beautiful", "modern"];
