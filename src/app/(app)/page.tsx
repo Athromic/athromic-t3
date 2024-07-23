@@ -12,6 +12,7 @@ import { BentoGridThirdDemo } from "@/components/home/bento"
 
 import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
+import { DamnGoodCard } from "@/components/home/damn-good-card";
 export default async function Home() {
 
   const words = ["better","beautiful", "modern"];
@@ -51,7 +52,7 @@ export default async function Home() {
         >
           and a link,
         </LinkPreview>{" "}
-        crazy. Now using Payload CMS!
+        crazy.
         </p>
         <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"

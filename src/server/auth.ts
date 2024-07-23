@@ -7,7 +7,7 @@ import {
 import { type Adapter } from "next-auth/adapters";
 import GitHubProvider from "next-auth/providers/github";
 import { env } from "@/env";
-import { tursoDB } from "@/server/db";
+import { db } from "@/server/db";
 import EmailProvider from "next-auth/providers/email";
 import {
   accounts,
@@ -53,7 +53,7 @@ export const authOptions: NextAuthOptions = {
     }),
     
   },
-  adapter: DrizzleAdapter(tursoDB, {
+  adapter: DrizzleAdapter(db, {
     usersTable: users,
     accountsTable: accounts,
     sessionsTable: sessions,
