@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM,DATABASE_URI_PAYLOAD,PAYLOAD_SECRET
+          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM,DATABASE_URI_PAYLOAD,PAYLOAD_SECRET,MONGODB_URI
         env:
           _GITHUB_ID: ${{ secrets._GITHUB_ID }}
           TYPE__GITHUB_ID: encrypted
@@ -67,6 +67,10 @@ jobs:
           TYPE_PAYLOAD_SECRET: encrypted
           TARGET_PAYLOAD_SECRET: preview,development,production
 
+          MONGODB_URI: ${{ secrets.PAYLOAD_SECRET }}
+          TYPE_MONGODB_URI: encrypted
+          TARGET_MONGODB_URI: preview,development,production
+
       - name: Debug Environment Variables
         run: |
           echo "_GITHUB_ID: ${{ secrets._GITHUB_ID }}"
@@ -83,6 +87,7 @@ jobs:
           echo "EMAIL_FROM: ${{ secrets.EMAIL_FROM }}"
           echo "DATABASE_URI_PAYLOAD: ${{ secrets.DATABASE_URI_PAYLOAD }}"
           echo "PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}"
+          echo "MONGODB_URI: ${{ secrets.MONGODB_URI }}"
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy

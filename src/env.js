@@ -35,6 +35,7 @@ export const env = createEnv({
     EMAIL_FROM: z.string(),
     DATABASE_URI_PAYLOAD: z.string(),
     PAYLOAD_SECRET: z.string(),
+    MONGODB_URI: z.string()
   },
 
   /**
@@ -66,7 +67,8 @@ export const env = createEnv({
     EMAIL_SERVER_PORT: process.env.EMAIL_SERVER_PORT,
     EMAIL_FROM: process.env.EMAIL_FROM,
     DATABASE_URI_PAYLOAD: process.env.DATABASE_URI_PAYLOAD,
-    PAYLOAD_SECRET: process.env.PAYLOAD_SECRET
+    PAYLOAD_SECRET: process.env.PAYLOAD_SECRET,
+    MONGODB_URI: process.env.MONGODB_URI
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

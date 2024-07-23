@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    /* Base Options: */
+    "baseUrl": ".",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -12,36 +17,25 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    /* Bundled projects */
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "ES2022"
-    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
-    /* Path Aliases */
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
       ],
       "@payload-config": [
-        "./src/payload.config.ts"
+        "./payload.config.ts"
       ]
     },
     "target": "ES2017"
   },
   "include": [
-    ".eslintrc.cjs",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.cjs",
-    "**/*.js",
     ".next/types/**/*.ts"
   ],
   "exclude": [
