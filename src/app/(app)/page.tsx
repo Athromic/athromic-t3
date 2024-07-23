@@ -51,7 +51,7 @@ export default async function Home() {
         >
           and a link,
         </LinkPreview>{" "}
-        crazy.
+        crazy. Now using Payload CMS!
         </p>
         <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
