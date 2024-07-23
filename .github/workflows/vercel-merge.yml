@@ -93,7 +93,7 @@ jobs:
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
         env:
-          VERBOSE: true
+          VERBOSE: false
       
       - name: Debug Vercel Deployment Outputs
         run: |
