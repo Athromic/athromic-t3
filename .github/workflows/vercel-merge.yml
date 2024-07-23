@@ -81,6 +81,8 @@ jobs:
           echo "EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}"
           echo "EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}"
           echo "EMAIL_FROM: ${{ secrets.EMAIL_FROM }}"
+          echo "DATABASE_URI_Payload: ${{ secrets.DATABASE_URI_Payload }}"
+          echo "PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}"
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy
