@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM
+          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM,DATABASE_URI_Payload,PAYLOAD_SECRET
         env:
           _GITHUB_ID: ${{ secrets._GITHUB_ID }}
           TYPE__GITHUB_ID: encrypted
@@ -58,6 +58,14 @@ jobs:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           TYPE_EMAIL_FROM: encrypted
           TARGET_EMAIL_FROM: preview,development,production
+          # PayloadCMS
+          DATABASE_URI_Payload: ${{ secrets.DATABASE_URI_Payload }}
+          TYPE_DATABASE_URI_Payload: encrypted
+          TARGET_DATABASE_URI_Payload: preview,development,production
+          # PayloadCMS
+          PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}
+          TYPE_PAYLOAD_SECRET: encrypted
+          TARGET_PAYLOAD_SECRET: preview,development,production
 
       - name: Debug Environment Variables
         run: |
