@@ -60,8 +60,8 @@ jobs:
           TARGET_EMAIL_FROM: preview,development,production
           # PayloadCMS
           DATABASE_URI_PAYLOAD: ${{ secrets.DATABASE_URI_PAYLOAD }}
-          TYPE_DATABASE_URI_Payload: encrypted
-          TARGET_DATABASE_URI_Payload: preview,development,production
+          TYPE_DATABASE_URI_PAYLOAD: encrypted
+          TARGET_DATABASE_URI_PAYLOAD: preview,development,production
           # PayloadCMS
           PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}
           TYPE_PAYLOAD_SECRET: encrypted
