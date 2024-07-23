@@ -65,7 +65,7 @@ export const env = createEnv({
     EMAIL_SERVER_HOST: process.env.EMAIL_SERVER_HOST,
     EMAIL_SERVER_PORT: process.env.EMAIL_SERVER_PORT,
     EMAIL_FROM: process.env.EMAIL_FROM,
-    DATABASE_URI_PAYLOAD: process.env.DATABASE_URI_Payload,
+    DATABASE_URI_PAYLOAD: process.env.DATABASE_URI_PAYLOAD,
     PAYLOAD_SECRET: process.env.PAYLOAD_SECRET
   },
   /**
