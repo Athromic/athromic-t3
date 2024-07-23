@@ -26,7 +26,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="light">
+    <html lang="en-CA" className="light">
       <body className={cx(sfPro.variable, inter.variable)}>
           <div className="fixed inset-0 -z-10 w-full h-screen">
             <GridBackground />
