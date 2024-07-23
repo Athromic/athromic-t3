@@ -116,6 +116,9 @@ importers:
       cobe:
         specifier: ^0.6.3
         version: 0.6.3
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
