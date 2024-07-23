@@ -1,6 +1,7 @@
 
 ![Logo](https://ucarecdn.com/9367f7ee-4057-427a-8db5-b680ed8d4cea/-/preview//)
 
+Icon made with [IconKitchen](https://icon.kitchen).
 
 # Athromic-t3
 
