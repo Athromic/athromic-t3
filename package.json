@@ -13,8 +13,7 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit",
-    "preinstall": "npx only-allow pnpm"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.4.1",
