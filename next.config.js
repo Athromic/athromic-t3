@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         source: "/docs/:match*",
-        destination: "https://react-email.mintlify.dev/docs/:match*",
+        destination: "https://athromic-b017e72c.mintlify.app/introduction",
       },
     ];
   },
