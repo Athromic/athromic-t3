@@ -14,7 +14,8 @@
     "ci": "payload migrate && pnpm build",
     "generate:types": "payload generate:types",
     "generate:schema": "payload-graphql generate:schema",
-    "standalone-script": "node ./src/scripts/standalone-script.js"
+    "standalone-script": "node ./src/scripts/standalone-script.js",
+    "typecheck": "tsc --noEmit"
   },
   "engines": {
     "node": "^18.20.2 || >=20.9.0"
@@ -26,6 +27,8 @@
     "@payloadcms/richtext-lexical": "3.0.0-beta.67",
     "@payloadcms/richtext-slate": "3.0.0-beta.67",
     "@payloadcms/ui": "3.0.0-beta.67",
+    "@vercel/analytics": "^1.3.1",
+    "@vercel/speed-insights": "^1.0.12",
     "babel-plugin-react-compiler": "^0.0.0-experimental-592953e-20240517",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.2",
