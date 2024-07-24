@@ -24,11 +24,14 @@ jobs:
         with:
           node-version: 18
 
-      - name: Cache Node modules
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Cache pnpm store
         uses: actions/cache@v2
         with:
-          path: ~/.pnpm
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
