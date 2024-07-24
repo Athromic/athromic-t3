@@ -20,7 +20,7 @@
     "@payloadcms/db-mongodb": "3.0.0-beta.67",
     "@payloadcms/live-preview-react": "3.0.0-beta.67",
     "@payloadcms/next": "3.0.0-beta.67",
-    "@payloadcms/plugin-cloud": "3.0.0-beta.67",
+    "@payloadcms/plugin-cloud": "3.0.1",
     "@payloadcms/plugin-form-builder": "3.0.0-beta.67",
     "@payloadcms/plugin-nested-docs": "3.0.0-beta.67",
     "@payloadcms/plugin-redirects": "3.0.0-beta.67",
