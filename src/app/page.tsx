@@ -10,7 +10,7 @@ import { Text } from "../components/text";
 import { Topbar } from "../components/topbar";
 
 export const metadata: Metadata = {
-  title: "React Email",
+  title: "Athromic",
   description:
     "A collection of high-quality, unstyled components for creating beautiful emails.",
 };

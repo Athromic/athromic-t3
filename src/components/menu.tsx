@@ -12,8 +12,8 @@ export const Menu: React.FC = () => (
       <MenuItem className="w-full px-2" href="/docs">
         Docs
       </MenuItem>
-      <MenuItem className="w-full px-2" href="/examples">
-        Examples
+      <MenuItem className="w-full px-2" href="/app/login">
+        Login
       </MenuItem>
     </ul>
     <span
@@ -77,7 +77,7 @@ const MenuItem: React.FC<Readonly<MenuItemProps>> = ({
         "text-slate-11 inline-flex h-8 items-center justify-center rounded-md text-sm",
         "hover:text-slate-12 hover:bg-white/10",
         "outline-none focus:bg-white/10 focus:ring-2 focus:ring-white/20",
-        className,
+        className
       )}
       href={href}
     >

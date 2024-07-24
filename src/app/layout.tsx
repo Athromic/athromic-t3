@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { inter } from "./inter";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://react.email"),
+  metadataBase: new URL("https://www.athromic.com"),
   icons: {
     icon: [
       {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: "static/cover.png",
     type: "website",
-    url: "https://react.email",
+    url: "https://www.athromic.com",
   },
 };
 
@@ -38,6 +39,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
 
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
