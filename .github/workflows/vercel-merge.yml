@@ -10,59 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
       - uses: dkershner6/vercel-set-env-action@v1
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: PORT,DATABASE_URI,PAYLOAD_SECRET,PAYLOAD_PUBLIC_SERVER_URL,NEXT_PUBLIC_SERVER_URL,NEXT_PUBLIC_IS_LIVE,PAYLOAD_PUBLIC_DRAFT_SECRET,NEXT_PRIVATE_DRAFT_SECRET,REVALIDATION_KEY,NEXT_PRIVATE_REVALIDATION_KEY
+          envVariableKeys: PAYLOAD_SECRET,MONGODB_URI
         env:
-          PORT: ${{ secrets.PORT }}
-          TYPE_PORT: encrypted
-          TARGET_PORT: preview,development,production
-          DATABASE_URI: ${{ secrets.DATABASE_URI }}
-          TYPE_DATABASE_URI: encrypted
-          TARGET_DATABASE_URI: preview,development,production
           PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}
           TYPE_PAYLOAD_SECRET: encrypted
           TARGET_PAYLOAD_SECRET: preview,development,production
-          PAYLOAD_PUBLIC_SERVER_URL: ${{ secrets.PAYLOAD_PUBLIC_SERVER_URL }}
-          TYPE_PAYLOAD_PUBLIC_SERVER_URL: encrypted
-          TARGET_PAYLOAD_PUBLIC_SERVER_URL: preview,development,production
-          NEXT_PUBLIC_SERVER_URL: ${{ secrets.NEXT_PUBLIC_SERVER_URL }}
-          TYPE_NEXT_PUBLIC_SERVER_URL: encrypted
-          TARGET_NEXT_PUBLIC_SERVER_URL: preview,development,production
-          NEXT_PUBLIC_IS_LIVE: ${{ secrets.NEXT_PUBLIC_IS_LIVE }}
-          TYPE_NEXT_PUBLIC_IS_LIVE: encrypted
-          TARGET_NEXT_PUBLIC_IS_LIVE: preview,development,production
-          PAYLOAD_PUBLIC_DRAFT_SECRET: ${{ secrets.PAYLOAD_PUBLIC_DRAFT_SECRET }}
-          TYPE_PAYLOAD_PUBLIC_DRAFT_SECRET: encrypted
-          TARGET_PAYLOAD_PUBLIC_DRAFT_SECRET: preview,development,production
-          # Email stuff
-          NEXT_PRIVATE_DRAFT_SECRET: ${{ secrets.NEXT_PRIVATE_DRAFT_SECRET }}
-          TYPE_NEXT_PRIVATE_DRAFT_SECRET: encrypted
-          TARGET_NEXT_PRIVATE_DRAFT_SECRET: preview,development,production
-          # Password
-          REVALIDATION_KEY: ${{ secrets.REVALIDATION_KEY }}
-          TYPE_REVALIDATION_KEY: encrypted
-          TARGET_REVALIDATION_KEY: preview,development,production
-          # Host
-          NEXT_PRIVATE_REVALIDATION_KEY: ${{ secrets.NEXT_PRIVATE_REVALIDATION_KEY }}
-          TYPE_NEXT_PRIVATE_REVALIDATION_KEY: encrypted
-          TARGET_NEXT_PRIVATE_REVALIDATION_KEY: preview,development,production
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          TYPE_MONGODB_URI: encrypted
+          TARGET_MONGODB_URI: preview,development,production
 
       - name: Debug Environment Variables
         run: |
-          echo "PORT: ${{ secrets.PORT }}"
-          echo "DATABASE_URI: ${{ secrets.DATABASE_URI }}"
           echo "PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}"
-          echo "PAYLOAD_PUBLIC_SERVER_URL: ${{ secrets.PAYLOAD_PUBLIC_SERVER_URL }}"
-          echo "NEXT_PUBLIC_SERVER_URL: ${{ secrets.NEXT_PUBLIC_SERVER_URL }}"
-          echo "NEXT_PUBLIC_IS_LIVE: ${{ secrets.NEXT_PUBLIC_IS_LIVE }}"
-          echo "PAYLOAD_PUBLIC_DRAFT_SECRET: ${{ secrets.PAYLOAD_PUBLIC_DRAFT_SECRET }}"
-          echo "NEXT_PRIVATE_DRAFT_SECRET: ${{ secrets.NEXT_PRIVATE_DRAFT_SECRET }}"
-          echo "REVALIDATION_KEY: ${{ secrets.REVALIDATION_KEY }}"
-          echo "NEXT_PRIVATE_REVALIDATION_KEY: ${{ secrets.NEXT_PRIVATE_REVALIDATION_KEY }}"
+          echo "MONGODB_URI: ${{ secrets.MONGODB_URI }}"
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy
@@ -74,7 +39,7 @@ jobs:
           vercel-project-id: ${{ secrets.PROJECT_ID }}
         env:
           VERBOSE: true
-      
+
       - name: Debug Vercel Deployment Outputs
         run: |
           echo "Vercel Preview URL: ${{ steps.vercel-deploy.outputs.preview-url }}"
