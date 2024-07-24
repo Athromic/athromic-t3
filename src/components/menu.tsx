@@ -9,7 +9,7 @@ const DISCORD_URL = "/discord";
 export const Menu: React.FC = () => (
   <nav className="flex items-center gap-2">
     <ul className="flex gap-2">
-      <MenuItem className="w-full px-2" href="/docs">
+      <MenuItem className="w-full px-2" href="https://docs.athromic.com">
         Docs
       </MenuItem>
       <MenuItem className="w-full px-2" href="/app/login">
