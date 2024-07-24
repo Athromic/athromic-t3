@@ -1,50 +1,30 @@
+## Getting Started
 
-![Logo](https://ucarecdn.com/9367f7ee-4057-427a-8db5-b680ed8d4cea/-/preview//)
-
-Icon made with [IconKitchen](https://icon.kitchen).
-
-# Athromic-t3
-
-A brief description of what this project does and who it's for
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-
-## Run Locally
-
-Clone the project
+First, run the development server:
 
 ```bash
-  git clone https://github.com/Athromic/athromic-t3.git
+pnpm dev
 ```
 
-Go to the project directory
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-  cd atomic-t3
-```
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-Install dependencies
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-```bash
-  npm install
-```
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-Start the server
+## Learn More
 
-```bash
-  npm run start
-```
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

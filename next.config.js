@@ -1,17 +1,45 @@
-import { withPayload } from '@payloadcms/next/withPayload'
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
- */
-await import("./src/env.js");
-
-/** @type {import("next").NextConfig} */
-const config = {
-
-  images: {
-    domains: ["avatars.githubusercontent.com", "vercel.com", "images.unsplash.com", "assets.aceternity.com", "api.microlink.io","pbs.twimg.com","ucarecdn.com"],
- },
-
+/** @type {import('next').NextConfig} */
+module.exports = {
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: "/discord",
+        destination: "https://discord.com/invite/n2pWEjjNnD",
+        permanent: true,
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/docs",
+        destination: "https://react-email.mintlify.dev/docs",
+      },
+      {
+        source: "/docs/:match*",
+        destination: "https://react-email.mintlify.dev/docs/:match*",
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: "/api/:path*",
+        headers: [
+          { key: "Access-Control-Allow-Credentials", value: "true" },
+          { key: "Access-Control-Allow-Origin", value: "*" },
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+          },
+          {
+            key: "Access-Control-Allow-Headers",
+            value:
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+        ],
+      },
+    ];
+  },
 };
-
-export default withPayload(config);
