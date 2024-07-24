@@ -88,14 +88,6 @@ export default buildConfig({
   i18n: {
     supportedLanguages: { en },
   },
-
-  admin: {
-    autoLogin: {
-      email: 'dev@payloadcms.com',
-      password: 'test',
-      prefillOnly: true,
-    },
-  },
   async onInit(payload) {
     const existingUsers = await payload.find({
       collection: 'users',
