@@ -15,64 +15,54 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: athromic-t3
-          envVariableKeys: _GITHUB_ID,_GITHUB_SECRET,NEXTAUTH_URL,DATABASE_URL,NEXTAUTH_SECRET,TURSO_CONNECTION_URL,TURSO_AUTH_TOKEN,EMAIL_SERVER_USER,EMAIL_SERVER_PASSWORD,EMAIL_SERVER_HOST,EMAIL_SERVER_PORT,EMAIL_FROM
+          envVariableKeys: PORT,DATABASE_URI,PAYLOAD_SECRET,PAYLOAD_PUBLIC_SERVER_URL,NEXT_PUBLIC_SERVER_URL,NEXT_PUBLIC_IS_LIVE,PAYLOAD_PUBLIC_DRAFT_SECRET,NEXT_PRIVATE_DRAFT_SECRET,REVALIDATION_KEY,NEXT_PRIVATE_REVALIDATION_KEY
         env:
-          _GITHUB_ID: ${{ secrets._GITHUB_ID }}
-          TYPE__GITHUB_ID: encrypted
-          TARGET__GITHUB_ID: preview,development,production
-          _GITHUB_SECRET: ${{ secrets._GITHUB_SECRET }}
-          TYPE__GITHUB_SECRET: encrypted
-          TARGET__GITHUB_SECRET: preview,development,production
-          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
-          TYPE_NEXTAUTH_URL: encrypted
-          TARGET_NEXTAUTH_URL: preview,development,production
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          TYPE_DATABASE_URL: encrypted
-          TARGET_DATABASE_URL: preview,development,production
-          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-          TYPE_NEXTAUTH_SECRET: encrypted
-          TARGET_NEXTAUTH_SECRET: preview,development,production
-          TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}
-          TYPE_TURSO_CONNECTION_URL: encrypted
-          TARGET_TURSO_CONNECTION_URL: preview,development,production
-          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
-          TYPE_TURSO_AUTH_TOKEN: encrypted
-          TARGET_TURSO_AUTH_TOKEN: preview,development,production
+          PORT: ${{ secrets.PORT }}
+          TYPE_PORT: encrypted
+          TARGET_PORT: preview,development,production
+          DATABASE_URI: ${{ secrets.DATABASE_URI }}
+          TYPE_DATABASE_URI: encrypted
+          TARGET_DATABASE_URI: preview,development,production
+          PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}
+          TYPE_PAYLOAD_SECRET: encrypted
+          TARGET_PAYLOAD_SECRET: preview,development,production
+          PAYLOAD_PUBLIC_SERVER_URL: ${{ secrets.PAYLOAD_PUBLIC_SERVER_URL }}
+          TYPE_PAYLOAD_PUBLIC_SERVER_URL: encrypted
+          TARGET_PAYLOAD_PUBLIC_SERVER_URL: preview,development,production
+          NEXT_PUBLIC_SERVER_URL: ${{ secrets.NEXT_PUBLIC_SERVER_URL }}
+          TYPE_NEXT_PUBLIC_SERVER_URL: encrypted
+          TARGET_NEXT_PUBLIC_SERVER_URL: preview,development,production
+          NEXT_PUBLIC_IS_LIVE: ${{ secrets.NEXT_PUBLIC_IS_LIVE }}
+          TYPE_NEXT_PUBLIC_IS_LIVE: encrypted
+          TARGET_NEXT_PUBLIC_IS_LIVE: preview,development,production
+          PAYLOAD_PUBLIC_DRAFT_SECRET: ${{ secrets.PAYLOAD_PUBLIC_DRAFT_SECRET }}
+          TYPE_PAYLOAD_PUBLIC_DRAFT_SECRET: encrypted
+          TARGET_PAYLOAD_PUBLIC_DRAFT_SECRET: preview,development,production
           # Email stuff
-          EMAIL_SERVER_USER: ${{ secrets.EMAIL_SERVER_USER }}
-          TYPE_EMAIL_SERVER_USER: encrypted
-          TARGET_EMAIL_SERVER_USER: preview,development,production
+          NEXT_PRIVATE_DRAFT_SECRET: ${{ secrets.NEXT_PRIVATE_DRAFT_SECRET }}
+          TYPE_NEXT_PRIVATE_DRAFT_SECRET: encrypted
+          TARGET_NEXT_PRIVATE_DRAFT_SECRET: preview,development,production
           # Password
-          EMAIL_SERVER_PASSWORD: ${{ secrets.EMAIL_SERVER_PASSWORD }}
-          TYPE_EMAIL_SERVER_PASSWORD: encrypted
-          TARGET_EMAIL_SERVER_PASSWORD: preview,development,production
+          REVALIDATION_KEY: ${{ secrets.REVALIDATION_KEY }}
+          TYPE_REVALIDATION_KEY: encrypted
+          TARGET_REVALIDATION_KEY: preview,development,production
           # Host
-          EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}
-          TYPE_EMAIL_SERVER_HOST: encrypted
-          TARGET_EMAIL_SERVER_HOST: preview,development,production
-          # Port
-          EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}
-          TYPE_EMAIL_SERVER_PORT: encrypted
-          TARGET_EMAIL_SERVER_PORT: preview,development,production
-          # Email From
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          TYPE_EMAIL_FROM: encrypted
-          TARGET_EMAIL_FROM: preview,development,production
+          NEXT_PRIVATE_REVALIDATION_KEY: ${{ secrets.NEXT_PRIVATE_REVALIDATION_KEY }}
+          TYPE_NEXT_PRIVATE_REVALIDATION_KEY: encrypted
+          TARGET_NEXT_PRIVATE_REVALIDATION_KEY: preview,development,production
 
       - name: Debug Environment Variables
         run: |
-          echo "_GITHUB_ID: ${{ secrets._GITHUB_ID }}"
-          echo "_GITHUB_SECRET: ${{ secrets._GITHUB_SECRET }}"
-          echo "NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}"
-          echo "DATABASE_URL: ${{ secrets.DATABASE_URL }}"
-          echo "NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}"
-          echo "TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}"
-          echo "TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}"
-          echo "EMAIL_SERVER_USER: ${{ secrets.EMAIL_SERVER_USER }}"
-          echo "EMAIL_SERVER_PASSWORD: ${{ secrets.EMAIL_SERVER_PASSWORD }}"
-          echo "EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}"
-          echo "EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}"
-          echo "EMAIL_FROM: ${{ secrets.EMAIL_FROM }}"
+          echo "PORT: ${{ secrets.PORT }}"
+          echo "DATABASE_URI: ${{ secrets.DATABASE_URI }}"
+          echo "PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}"
+          echo "PAYLOAD_PUBLIC_SERVER_URL: ${{ secrets.PAYLOAD_PUBLIC_SERVER_URL }}"
+          echo "NEXT_PUBLIC_SERVER_URL: ${{ secrets.NEXT_PUBLIC_SERVER_URL }}"
+          echo "NEXT_PUBLIC_IS_LIVE: ${{ secrets.NEXT_PUBLIC_IS_LIVE }}"
+          echo "PAYLOAD_PUBLIC_DRAFT_SECRET: ${{ secrets.PAYLOAD_PUBLIC_DRAFT_SECRET }}"
+          echo "NEXT_PRIVATE_DRAFT_SECRET: ${{ secrets.NEXT_PRIVATE_DRAFT_SECRET }}"
+          echo "REVALIDATION_KEY: ${{ secrets.REVALIDATION_KEY }}"
+          echo "NEXT_PRIVATE_REVALIDATION_KEY: ${{ secrets.NEXT_PRIVATE_REVALIDATION_KEY }}"
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy

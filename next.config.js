@@ -1,17 +1,50 @@
-import { withPayload } from '@payloadcms/next/withPayload'
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
- */
-await import("./src/env.js");
+/** @type {import('next').NextConfig} */
+const ContentSecurityPolicy = require('./csp')
+const redirects = require('./redirects')
 
-/** @type {import("next").NextConfig} */
-const config = {
-
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    domains: ["avatars.githubusercontent.com", "vercel.com", "images.unsplash.com", "assets.aceternity.com", "api.microlink.io","pbs.twimg.com","ucarecdn.com"],
- },
+    domains: ['localhost', process.env.NEXT_PUBLIC_SERVER_URL]
+      .filter(Boolean)
+      .map(url => url.replace(/https?:\/\//, '')),
+  },
+  redirects,
+  async headers() {
+    const headers = []
 
-};
+    // Prevent search engines from indexing the site if it is not live
+    // This is useful for staging environments before they are ready to go live
+    // To allow robots to crawl the site, use the `NEXT_PUBLIC_IS_LIVE` env variable
+    // You may want to also use this variable to conditionally render any tracking scripts
+    if (!process.env.NEXT_PUBLIC_IS_LIVE) {
+      headers.push({
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
+        ],
+        source: '/:path*',
+      })
+    }
 
-export default withPayload(config);
+    // Set the `Content-Security-Policy` header as a security measure to prevent XSS attacks
+    // It works by explicitly whitelisting trusted sources of content for your website
+    // This will block all inline scripts and styles except for those that are allowed
+    headers.push({
+      source: '/(.*)',
+      headers: [
+        {
+          key: 'Content-Security-Policy',
+          value: ContentSecurityPolicy,
+        },
+      ],
+    })
+
+    return headers
+  },
+}
+
+module.exports = nextConfig
