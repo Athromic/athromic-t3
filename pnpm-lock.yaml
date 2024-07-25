@@ -23,6 +23,9 @@ importers:
       '@supabase/supabase-js':
         specifier: 2.39.3
         version: 2.39.3
+      '@tabler/icons-react':
+        specifier: ^3.11.0
+        version: 3.11.0(react@19.0.0-rc.0)
       '@tsconfig/next':
         specifier: ^2.0.3
         version: 2.0.3
@@ -47,6 +50,9 @@ importers:
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
+      framer-motion:
+        specifier: ^11.3.17
+        version: 11.3.17(react-dom@19.0.0-rc.0(react@19.0.0-rc.0))(react@19.0.0-rc.0)
       lucide-react:
         specifier: ^0.414.0
         version: 0.414.0(react@19.0.0-rc.0)
@@ -469,6 +475,14 @@ packages:
 
   '@swc/helpers@0.5.11':
     resolution: {integrity: sha512-YNlnKRWF2sVojTpIyzwou9XoTNbzbzONwRhOoniEioF1AtaitTvVZblaQRrAzChWQ1bLYyYSWzM18y4WwgzJ+A==}
+
+  '@tabler/icons-react@3.11.0':
+    resolution: {integrity: sha512-xHNBi9mns1slvqos+7LkP3ube4CjWrANMbxMaorzwzO9J/+y1sAEG/sN8CV8FmtpYW/9/gDR+OWCjjLLg0RmAw==}
+    peerDependencies:
+      react: '>= 16'
+
+  '@tabler/icons@3.11.0':
+    resolution: {integrity: sha512-/vZinJNvCYhdAB+RUsyCpanSPuOEKHHIZi4Uu0Bw7ilewHnQhCWUPrT704uHCRli2ROl7spADPmWzAqOganA5A==}
 
   '@tsconfig/next@2.0.3':
     resolution: {integrity: sha512-b4aKvmdWnv9aUy+NStUFlefirk3SItW20OJtbi5/ue9oMRaQtUYbN5zsr7OmV3rlx6Gp6h7A82gPoCXhrNGVPQ==}
@@ -1029,6 +1043,20 @@ packages:
 
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
+
+  framer-motion@11.3.17:
+    resolution: {integrity: sha512-LZcckvZL8Rjod03bud8LQcp+R0PLmWIlOSu+NVc+v6Uh43fQr4IBsEAX7sSn7CdBQ1L0fZ/IqSXZVPnGFSMxHw==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -2318,6 +2346,13 @@ snapshots:
     dependencies:
       tslib: 2.6.3
 
+  '@tabler/icons-react@3.11.0(react@19.0.0-rc.0)':
+    dependencies:
+      '@tabler/icons': 3.11.0
+      react: 19.0.0-rc.0
+
+  '@tabler/icons@3.11.0': {}
+
   '@tsconfig/next@2.0.3': {}
 
   '@types/node@20.14.12':
@@ -3014,6 +3049,13 @@ snapshots:
       signal-exit: 4.1.0
 
   fraction.js@4.3.7: {}
+
+  framer-motion@11.3.17(react-dom@19.0.0-rc.0(react@19.0.0-rc.0))(react@19.0.0-rc.0):
+    dependencies:
+      tslib: 2.6.3
+    optionalDependencies:
+      react: 19.0.0-rc.0
+      react-dom: 19.0.0-rc.0(react@19.0.0-rc.0)
 
   fs.realpath@1.0.0: {}
 
