@@ -51,7 +51,7 @@ const Home = () => {
                 <IconArrowRight />
               </Link>
             </Button>
-            <Code className="hidden max-w-max md:!inline-flex" language="bash">
+            <Code className="hidden max-w-max md:!inline-flex" language="java">
               npx create-email@latest
             </Code>
           </div>
