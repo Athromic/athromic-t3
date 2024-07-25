@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: "https://react.email/static/cover.png",
+    images: "static/cover.svg",
   },
   openGraph: {
-    images: "static/cover.png",
+    images: "static/cover.svg",
     type: "website",
     url: "https://www.athromic.com",
   },
