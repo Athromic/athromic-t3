@@ -1,4 +1,3 @@
-/* eslint-disable turbo/no-undeclared-env-vars */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Resend } from "resend";
 import { createClient } from "@supabase/supabase-js";
@@ -59,7 +58,7 @@ export async function POST(req: NextRequest) {
         { error: error.message },
         {
           status: 500,
-        },
+        }
       );
     }
   }

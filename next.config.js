@@ -14,11 +14,11 @@ module.exports = {
     return [
       {
         source: "/docs",
-        destination: "https://athromic-b017e72c.mintlify.app/docs",
+        destination: "https://docs.athromic.com/docs",
       },
       {
         source: "/docs/:match*",
-        destination: "https://athromic-b017e72c.mintlify.app/docs",
+        destination: "https://docs.athromic.com/docs",
       },
     ];
   },
