@@ -1,52 +1,20 @@
 "use client";
-
-import React, { useState } from "react";
-import { Button, Input } from "@nextui-org/react"; // Adjust the import based on your NextUI setup
+import { Input, Button } from "@nextui-org/react";
 
 const SignupForm = () => {
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [isInvalid, setIsInvalid] = useState(false);
-
-  const validateEmail = (value: string) =>
-    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (!validateEmail(email)) {
-      setIsInvalid(true);
-      return;
-    }
-    setIsInvalid(false);
-    console.log(email);
-    setIsLoading(true);
-    // Simulate async process
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000); // Adjust the delay as needed
-  };
-
   return (
-    <form
-      className="z-20 mt-8 flex w-full flex-col items-center justify-center gap-6 sm:mt-[42px] sm:flex-row"
-      onSubmit={handleSubmit}
-    >
-      <Input
-        isClearable
-        type="email"
-        label="Email Address"
-        variant="faded"
-        className="max-w-xs md:max-w-80 w-full h-[52px]"
-        value={email}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setEmail(e.target.value)
-        }
-        isInvalid={isInvalid}
-      />
+    <form className="z-20 mt-8 flex w-full flex-col items-center justify-center gap-6 sm:mt-[42px] sm:flex-row">
+      <div className="relative flex flex-col items-center w-full max-w-xs md:max-w-80">
+        <Input
+          isClearable
+          type="email"
+          label="Email Address"
+          className="w-full h-[52px] no-zoom"
+        />
+      </div>
       <Button
         className="max-w-xs w-full bg-white text-black h-12 sm:w-fit"
         type="submit"
-        isLoading={isLoading}
       >
         Join waitlist
         <span
