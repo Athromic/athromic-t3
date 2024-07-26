@@ -1,30 +1,14 @@
 const colors = require("@radix-ui/colors");
 const { fontFamily } = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
-
-const iOsHeight = plugin(function ({ addUtilities }) {
-  const supportsTouchRule = "@supports (-webkit-touch-callout: none)";
-  const webkitFillAvailable = "-webkit-fill-available";
-
-  const utilities = {
-    ".min-h-screen-ios": {
-      [supportsTouchRule]: {
-        minHeight: webkitFillAvailable,
-      },
-    },
-    ".h-screen-ios": {
-      [supportsTouchRule]: {
-        height: webkitFillAvailable,
-      },
-    },
-  };
-
-  addUtilities(utilities, ["responsive"]);
-});
+const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -34,6 +18,9 @@ module.exports = {
           "linear-gradient(145.37deg, rgba(255, 255, 255, 0.1) -8.75%, rgba(255, 255, 255, 0.057) 83.95%)",
         shine:
           "linear-gradient(45deg, rgba(255,255,255,0) 45%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%)",
+      },
+      fontFamily: {
+        sans: ["Inter", "var(--font-inter)", ...fontFamily.sans],
       },
       colors: {
         cyan: {
@@ -65,9 +52,6 @@ module.exports = {
           12: colors.slateDarkA.slateA12,
         },
       },
-      fontFamily: {
-        sans: ["Inter", "var(--font-inter)", ...fontFamily.sans],
-      },
       keyframes: {
         shine: {
           "0%": { backgroundPosition: "-100%" },
@@ -80,5 +64,6 @@ module.exports = {
       },
     },
   },
-  plugins: [iOsHeight],
+  darkMode: "class",
+  plugins: [nextui()],
 };

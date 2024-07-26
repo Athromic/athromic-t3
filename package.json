@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^14.2.5",
+    "@nextui-org/react": "^2.4.6",
     "@radix-ui/colors": "1.0.1",
     "@radix-ui/react-slot": "1.1.0",
     "@sindresorhus/is": "6.1.0",
