@@ -31,7 +31,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} font-sans text-slate-12 selection:bg-cyan-5 selection:text-cyan-12 bg-black`}
+        className={`${inter.variable} font-sans text-slate-12 selection:bg-cyan-5 selection:text-cyan-12 bg-black overflow:hidden`}
       >
         <NextUIProvider>{children}</NextUIProvider>
         <Analytics />
