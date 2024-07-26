@@ -21,8 +21,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(@types/react@18.3.3)(react@19.0.0-rc.0)
       '@sindresorhus/is':
-        specifier: 6.1.0
-        version: 6.1.0
+        specifier: 7.0.0
+        version: 7.0.0
       '@supabase/supabase-js':
         specifier: 2.39.3
         version: 2.39.3
@@ -1520,9 +1520,9 @@ packages:
   '@selderee/plugin-htmlparser2@0.11.0':
     resolution: {integrity: sha512-P33hHGdldxGabLFjPPpaTxVolMrzrcegejx+0GxjrIb9Zv48D8yAIA/QTDR2dFl7Uz7urX8aX6+5bCZslr+gWQ==}
 
-  '@sindresorhus/is@6.1.0':
-    resolution: {integrity: sha512-BuvU07zq3tQ/2SIgBsEuxKYDyDjC0n7Zir52bpHy2xnBbW81+po43aLFPLbeV3HRAheFbGud1qgcqSYfhtHMAg==}
-    engines: {node: '>=16'}
+  '@sindresorhus/is@7.0.0':
+    resolution: {integrity: sha512-WDTlVTyvFivSOuyvMeedzg2hdoBLZ3f1uNVuEida2Rl9BrfjrIRjWA/VZIrMRLvSwJYCAlCRA3usDt1THytxWQ==}
+    engines: {node: '>=18'}
 
   '@supabase/functions-js@2.4.2':
     resolution: {integrity: sha512-fRRN707nZ3uB6xIye4niCAai8NvmagFJKrCp/n5PsEWcb1cRLg50SEg1hZkVE36phZxTJAWuOwZ5yofmHnkWmA==}
@@ -5471,7 +5471,7 @@ snapshots:
       domhandler: 5.0.3
       selderee: 0.11.0
 
-  '@sindresorhus/is@6.1.0': {}
+  '@sindresorhus/is@7.0.0': {}
 
   '@supabase/functions-js@2.4.2':
     dependencies:
