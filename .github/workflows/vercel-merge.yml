@@ -1,9 +1,10 @@
 name: Deploy to Vercel on Merge
 
 on:
-  push:
-    branches:
-      - master
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
 
 jobs:
   build_and_deploy:
@@ -24,17 +25,13 @@ jobs:
           TYPE_MONGODB_URI: encrypted
           TARGET_MONGODB_URI: preview,development,production
 
-      - name: Debug Environment Variables
-        run: |
-          echo "PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}"
-          echo "MONGODB_URI: ${{ secrets.MONGODB_URI }}"
-
-      - uses: amondnet/vercel-action@v20
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
         id: vercel-deploy
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: '--prod'
+          vercel-args: "--prod"
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
         env:

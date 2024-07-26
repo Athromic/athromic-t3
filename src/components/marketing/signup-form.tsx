@@ -1,9 +1,20 @@
 "use client";
+import React, { useState, FormEvent } from "react";
 import { Input, Button } from "@nextui-org/react";
 
 const SignupForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+  };
+
   return (
-    <form className="z-20 mt-8 flex w-full flex-col items-center justify-center gap-6 sm:mt-[42px] sm:flex-row">
+    <form
+      className="z-20 mt-8 flex w-full flex-col items-center justify-center gap-6 sm:mt-[42px] sm:flex-row"
+      onSubmit={handleSubmit}
+    >
       <div className="relative flex flex-col items-center w-full max-w-xs md:max-w-80">
         <Input
           isClearable
@@ -15,6 +26,7 @@ const SignupForm = () => {
       <Button
         className="max-w-xs w-full bg-white text-black h-12 sm:w-fit"
         type="submit"
+        isLoading={isLoading}
       >
         Join waitlist
         <span

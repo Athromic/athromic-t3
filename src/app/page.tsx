@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <main>
+    <main className="relative overflow-hidden">
       <Grid />
       <div className="h-screen-ios relative z-20 mx-auto flex h-screen max-w-7xl flex-col justify-between px-4">
         <Topbar />
@@ -22,7 +22,7 @@ const Home = () => {
           <div className="max-w-[725px] text-center ">
             <div className="flex items-center justify-center mb-8">
               <Image
-                alt="React Email Logo"
+                alt="Athromic Logo"
                 height="90"
                 src="/static/logo.png"
                 width="90"
@@ -30,7 +30,7 @@ const Home = () => {
             </div>
             <section className="relative z-20 mt-16 flex flex-col items-center justify-center gap-[18px] sm:mt-0 sm:gap-6">
               <h1 className="relative flex max-w-xl text-center text-[clamp(40px,10vw,44px)] font-bold leading-none tracking-tighter sm:text-6xl before:animate-[shine_2s_ease-in-out] before:bg-[length:200%] before:bg-clip-text before:text-transparent before:content-['Design systems made functional'] ">
-                Design systems made functional
+                Design systems made worse
               </h1>
               <p className="relative max-w-lg text-center text-large font-medium text-default-400 [text-shadow:_0_2px_2px_rgb(0_0_0_/_25%)] sm:text-lg">
                 Open-source platform for creating, managing, and documenting

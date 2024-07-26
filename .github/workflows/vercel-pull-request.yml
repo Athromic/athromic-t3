@@ -13,33 +13,38 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v2
-      
+
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-org-id: ${{ secrets.ORG_ID}}
-          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
         env:
           VERBOSE: true
-      
+
       - name: Debug Vercel Deployment Outputs
         run: |
           echo "Vercel Preview URL: ${{ steps.vercel-deploy.outputs.preview-url }}"
           echo "Vercel Deployment Output: ${{ toJson(steps.vercel-deploy.outputs) }}"
-      
+
       - name: Set preview-url output
         run: |
           echo "PREVIEW_URL=${{ steps.vercel-deploy.outputs.preview-url }}" >> $GITHUB_ENV
-      
+
       - name: Add comment to pull request
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `Deployed to [Preview URL](${ process.env.PREVIEW_URL })`
-            })
+            const previewUrl = process.env.PREVIEW_URL;
+            if (previewUrl) {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `Deployed to [Preview URL](${previewUrl})`
+              });
+            } else {
+              console.log("No preview URL found.");
+            }
