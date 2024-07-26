@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Footer } from "../components/footer";
-import { Heading } from "../components/heading";
-import { Text } from "../components/text";
-import { Topbar } from "../components/topbar";
+import { Footer } from "@/components/footer";
+import { Heading } from "@/components/heading";
+import { Text } from "@/components/text";
+import { Topbar } from "@/components/topbar";
 import React from "react";
-import { Input, Button } from "@nextui-org/react";
+import SignupForm from "@/components/marketing/signup-form";
 
 export const metadata: Metadata = {
   title: "Athromic",
@@ -40,44 +40,7 @@ const Home = () => {
                 beautiful emails using React and TypeScript.
               </Text>
             </div>
-            <form className="z-20 mt-8 flex w-full flex-col items-center justify-center gap-6 sm:mt-[42px] sm:flex-row">
-              <Input
-                isClearable
-                type="email"
-                label="Email Address"
-                variant="faded"
-                className="max-w-xs  md:max-w-80 w-full h-[52px]"
-              />
-              <Button className="max-w-xs w-full bg-white text-black h-12 sm:w-fit">
-                Join waitlist
-                <span
-                  className="flex h-5 w-5 items-center justify-center rounded-full bg-default-700 text-black transition-transform group-data-[hover]:translate-x-1.5"
-                  aria-hidden="true"
-                  focusable="false"
-                  tabindex="-1"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="text-base"
-                    fill="none"
-                    focusable="false"
-                    height="1em"
-                    role="presentation"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.6665 8H13.3332M13.3332 8L9.33317 4M13.3332 8L9.33317 12"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    ></path>
-                  </svg>
-                </span>
-              </Button>
-            </form>
+            <SignupForm />
           </div>
         </div>
         <Footer />
