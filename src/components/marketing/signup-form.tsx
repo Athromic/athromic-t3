@@ -2,6 +2,7 @@
 import React, { useState, FormEvent } from "react";
 import { Input, Button } from "@nextui-org/react";
 import { toast } from "sonner";
+import { Toaster } from "sonner";
 
 const SignupForm = () => {
   const [value, setValue] = React.useState("");
@@ -18,6 +19,7 @@ const SignupForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast.error("The waitlist signup is being built, check back soon!");
+    <Toaster richColors />;
     setIsLoading(true);
   };
 

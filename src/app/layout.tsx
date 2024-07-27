@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+// src/app/layout.tsx
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { inter } from "./inter";
 import { NextUIProvider } from "@nextui-org/react";
 import { Toaster } from "@/components/ui/sonner";
+import Head from "next/head";
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL("https://www.athromic.com"),
   icons: {
     icon: [
@@ -31,6 +32,12 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className="dark">
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+      </Head>
       <body
         className={`${inter.variable} font-sans text-slate-12 selection:bg-cyan-5 selection:text-cyan-12 bg-black`}
       >
