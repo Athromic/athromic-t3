@@ -39,7 +39,7 @@ const SignupForm = () => {
         />
       </div>
       <Button
-        className="max-w-xs w-full bg-white text-black h-12 sm:w-fit"
+        className="text-base max-w-xs w-full bg-white text-black h-12 sm:w-fit"
         type="submit"
         isLoading={isLoading}
       >
