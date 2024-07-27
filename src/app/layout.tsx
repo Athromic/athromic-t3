@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { inter } from "./inter";
 import { NextUIProvider } from "@nextui-org/react";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.athromic.com"),
@@ -34,6 +35,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         className={`${inter.variable} font-sans text-slate-12 selection:bg-cyan-5 selection:text-cyan-12 bg-black`}
       >
         <NextUIProvider>{children}</NextUIProvider>
+        <Toaster />
         <Analytics />
         <SpeedInsights />
       </body>

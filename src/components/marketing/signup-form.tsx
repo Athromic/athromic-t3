@@ -1,12 +1,23 @@
 "use client";
 import React, { useState, FormEvent } from "react";
 import { Input, Button } from "@nextui-org/react";
+import { toast } from "sonner";
 
 const SignupForm = () => {
+  const [value, setValue] = React.useState("");
+
+  const validateEmail = (value: string) =>
+    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
+
+  const isInvalid = React.useMemo(() => {
+    if (value === "") return false;
+    return validateEmail(value) ? false : true;
+  }, [value]);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    toast.error("The waitlist signup is being built, check back soon!");
     setIsLoading(true);
   };
 
@@ -18,9 +29,13 @@ const SignupForm = () => {
       <div className="relative flex flex-col items-center w-full max-w-xs md:max-w-80">
         <Input
           isClearable
+          value={value}
           type="email"
           label="Email Address"
-          className="w-full h-[52px] no-zoom"
+          className="w-full h-[52px] no-zoom text-base"
+          isInvalid={isInvalid}
+          color={isInvalid ? "danger" : "default"}
+          onValueChange={setValue}
         />
       </div>
       <Button
