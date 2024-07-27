@@ -41,7 +41,7 @@ const Home = () => {
           </div>
           <section className="z-20 mt-10 flex items-center justify-center sm:mt-20 sm:mt-[39px]">
             <p className="text-base text-default-400">Backed by</p>&nbsp;
-            <p> no one</p>
+            <p className="text-base"> no one</p>
           </section>
         </div>
         <Footer />
