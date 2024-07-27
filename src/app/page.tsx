@@ -30,18 +30,20 @@ const Home = () => {
             </div>
             <section className="relative z-20 mt-16 flex flex-col items-center justify-center gap-[18px] sm:mt-0 sm:gap-6">
               <h1 className="relative flex max-w-xl text-center text-[clamp(40px,10vw,44px)] font-bold leading-none tracking-tighter sm:text-6xl before:animate-[shine_2s_ease-in-out] before:bg-[length:200%] before:bg-clip-text before:text-transparent before:content-['Design systems made functional'] ">
-                Design systems made worse
+                Effortless adventure planning
               </h1>
               <p className="relative max-w-lg text-center text-large font-medium text-default-400 [text-shadow:_0_2px_2px_rgb(0_0_0_/_25%)] sm:text-lg">
-                Open-source platform for creating, managing, and documenting
-                design systems.
+                Athromic makes planning backpacking adventures easy. Map routes,
+                track gear, and share itineraries effortlessly.
               </p>
             </section>
             <SignupForm />
           </div>
           <section className="z-20 mt-10 flex items-center justify-center sm:mt-20 sm:mt-[39px]">
-            <p className="text-base text-default-400">Backed by</p>&nbsp;
-            <p className="text-base"> no one</p>
+            <p className="text-base text-default-400">
+              *Please note that you will only start receiving emails once we are
+              nearing the release of our product.
+            </p>
           </section>
         </div>
         <Footer />

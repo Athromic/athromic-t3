@@ -47,7 +47,7 @@ const SignupForm = () => {
       >
         Join waitlist
         <span
-          className="flex h-5 w-5 items-center justify-center rounded-full bg-default-700 text-black transition-transform group-data-[hover]:translate-x-1.5"
+          className="flex h-5 w-7 items-center justify-center rounded-full bg-default-700 transition-transform group-data-[hover]:translate-x-1.5"
           aria-hidden="true"
         >
           <svg

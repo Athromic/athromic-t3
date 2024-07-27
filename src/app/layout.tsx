@@ -5,7 +5,6 @@ import "./globals.css";
 import { inter } from "./inter";
 import { NextUIProvider } from "@nextui-org/react";
 import { Toaster } from "@/components/ui/sonner";
-import Head from "next/head";
 import type { Viewport } from "next";
 
 export const metadata = {
@@ -42,14 +41,6 @@ export const viewport: Viewport = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className="dark">
-      <Head>
-        <meta
-          content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"
-          name="viewport"
-        />
-
-        <meta name="viewport" content="width=device-width" />
-      </Head>
       <body
         className={`${inter.variable} font-sans text-slate-12 selection:bg-cyan-5 selection:text-cyan-12 bg-black`}
       >
