@@ -8,7 +8,7 @@ import Grid from "@/components/grid";
 export const metadata: Metadata = {
   title: "Athromic",
   description:
-    "A collection of high-quality, unstyled components for creating beautiful emails.",
+    "Making (ok) Roblox games.",
 };
 
 const Home = () => {
@@ -36,8 +36,8 @@ const Home = () => {
               </p>
             </section>
           </div>
-        </div>
         <Footer />
+        </div>
       </div>
       <Image
         alt=""
