@@ -30,21 +30,13 @@ const Home = () => {
             </div>
             <section className="relative z-20 mt-16 flex flex-col items-center justify-center gap-[18px] sm:mt-0 sm:gap-6">
               <h1 className="relative flex max-w-xl text-center text-[clamp(40px,10vw,44px)] font-bold leading-none tracking-tighter sm:text-6xl before:animate-[shine_2s_ease-in-out] before:bg-[length:200%] before:bg-clip-text before:text-transparent before:content-['Design systems made functional'] ">
-                Effortless adventure planning
+                Making (ok) video games
               </h1>
               <p className="relative max-w-lg text-center text-large font-medium text-default-400 [text-shadow:_0_2px_2px_rgb(0_0_0_/_25%)] sm:text-lg">
-                Athromic makes planning backpacking adventures easy. Map routes,
-                track gear, and share itineraries effortlessly.
+             Here at Athromic all we do is sit at computers and make Roblox games, fun, right?
               </p>
             </section>
-            <SignupForm />
           </div>
-          <section className="z-20 mt-10 flex items-center justify-center sm:mt-20 sm:mt-[39px]">
-            <p className="text-base text-default-400">
-              *Please note that you will only start receiving emails once we are
-              nearing the release of our product.
-            </p>
-          </section>
         </div>
         <Footer />
       </div>
