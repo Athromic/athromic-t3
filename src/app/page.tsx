@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Footer } from "@/components/footer";
 import { Topbar } from "@/components/topbar";
 import React from "react";
-import SignupForm from "@/components/marketing/signup-form";
 import Grid from "@/components/grid";
 
 export const metadata: Metadata = {
